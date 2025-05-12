@@ -1,0 +1,147 @@
+
+  :root {
+    --bg: #1a1c2c;      
+    --bg-secondary: #2e2f42;   
+    --text-main: #f8f8f2;      
+    --text-muted: #9a9ab0;    
+    --accent: #ff79c6;         
+    --accent-hover: #ff92d0;   
+    --font-main: 'Inter', sans-serif;
+    --font-code: 'Fira Code', monospace;
+  }
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: var(--font-main);
+    background-color: var(--bg);
+    color: var(--text-main);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 0;
+  }
+  
+  .hero {
+    background: var(--bg-secondary);
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .hero-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+  }
+  .highlight {
+    color: var(--accent);
+    font-family: var(--font-code);
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+  }
+  .section p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+  }
+  
+  .projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .project-card {
+    background: var(--bg-secondary);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+  .project-info h3 {
+    margin-top: 10px;
+    color: var(--text-main);
+  }
+  .project-info p {
+    color: var(--text-muted);
+  }
+  .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    font-family: var(--font-code);
+    background: transparent;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .btn:hover {
+    background: var(--accent);
+    color: var(--bg);
+  }
+  
+  .contact p {
+    margin: 10px 0;
+    text-align: center;
+  }
+  footer {
+    background: #020c1b;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) {
+    .hero-content {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+    }
+    .hero-content > div {
+      margin-left: 20px;
+    }
+  }
+  
